@@ -1,0 +1,118 @@
+.bin2dec {
+	width: min(100% - 2rem, 42rem);
+	margin: 0 auto;
+	padding-block: 4rem;
+}
+
+.bin2dec__back {
+	display: inline-block;
+	margin-bottom: 2rem;
+	padding: 0.55rem 0.85rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	color: var(--ink-soft);
+	background: var(--surface);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.bin2dec__back:hover {
+	border-color: var(--beginner);
+	color: var(--beginner);
+}
+
+.bin2dec h1 {
+	margin-bottom: 0.75rem;
+	color: var(--beginner);
+	font-family: var(--font-title);
+	font-size: clamp(2rem, 6vw, 3.25rem);
+	line-height: 1.05;
+}
+
+.bin2dec form {
+	display: grid;
+	gap: 0.75rem;
+	margin-top: 2rem;
+	padding: 1.5rem;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-top: 4px solid var(--beginner);
+	border-radius: var(--radius);
+}
+
+.bin2dec label {
+	color: var(--ink-soft);
+	font-weight: 700;
+}
+
+.bin2dec input {
+	width: 100%;
+	padding: 0.75rem 0.85rem;
+	border: 2px solid var(--line);
+	border-radius: var(--radius);
+	color: var(--ink);
+	background: var(--surface);
+	font: 1.1rem var(--font-code);
+}
+
+.bin2dec input:focus {
+	border-color: var(--beginner);
+	outline: 3px solid color-mix(in srgb, var(--beginner) 25%, transparent);
+	outline-offset: 1px;
+}
+
+.bin2dec input:invalid:not(:placeholder-shown) {
+	border-color: #b42318;
+}
+
+.bin2dec button {
+	justify-self: start;
+	padding: 0.7rem 1.1rem;
+	border: 2px solid var(--beginner);
+	border-radius: var(--radius);
+	color: #fff;
+	background: var(--beginner);
+	font: 700 1rem var(--font-body);
+	cursor: pointer;
+	transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.bin2dec button:hover {
+	color: var(--beginner);
+	background: var(--surface);
+}
+
+.bin2dec button:active {
+	transform: translateY(1px);
+}
+
+.bin2dec__result {
+	margin-top: 1.5rem;
+	padding: 1rem;
+	border: 1px solid var(--beginner);
+	border-radius: var(--radius);
+	background: var(--surface);
+}
+
+.bin2dec__result strong {
+	color: var(--ink-soft);
+}
+
+.bin2dec__result span {
+	color: var(--beginner);
+	font: 700 1.25rem var(--font-code);
+}
+
+@media (max-width: 32rem) {
+	.bin2dec {
+		padding-block: 2.5rem;
+	}
+
+	.bin2dec form {
+		padding: 1rem;
+	}
+
+	.bin2dec button {
+		width: 100%;
+	}
+}

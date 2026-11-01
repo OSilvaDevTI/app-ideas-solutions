@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin2Dec</title>
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+    <link rel="stylesheet" href="../../../assets/css/bin2dec.css">
+    <script src="../../../assets/js/bin2dec.js" defer></script>
+</head>
+<body>
+    <main class="bin2dec">
+        <a class="bin2dec__back" href="../../../index.html">&larr; Voltar ao início</a>
+        <h1>Conversor de Binário para Decimal</h1>
+        <form>
+            <label for="binario">Número binário:</label>
+            <input type="text" id="binario" name="binario" inputmode="numeric" pattern="[01]+" required>
+            <button type="submit">Converter</button>
+        </form>
+        <p class="bin2dec__result"><strong>Resultado:</strong> <span id="resultado">-</span></p>
+    </main>
+</body>
+</html>
