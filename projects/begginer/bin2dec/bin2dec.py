@@ -1,12 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-from views import *
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        decimal = request.form['decimal']
+        binario = bin(int(decimal)).replace("0b", "")
+        return render_template('bin2dec.html', decimal=decimal, result=binario)
+    return render_template('bin2dec.html')
 
 if __name__ == '__main__':
-    app.run()
-
-  decimal = input("Enter a decimal number: ")
-    binario = bin(int(decimal)).replace("0b", "")
-    print(f"The binary representation of {decimal} is: {binario}")
+    app.run(debug=True)
