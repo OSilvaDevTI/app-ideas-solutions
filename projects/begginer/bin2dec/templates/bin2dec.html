@@ -6,11 +6,12 @@
     <title>Bin2Dec</title>
 </head>
 <body>
-    <h1>Conversor de Decimal para Binário</h1>
+    <h1>Conversor de Binário para Decimal</h1>
     <form method="post">
-        <label for="decimal">Número decimal:</label>
-        <input type="number" id="decimal" name="decimal" required>
+        <label for="binario">Número binário:</label>
+        <input type="text" id="binario" name="binario" pattern="[01]+" required>
         <button type="submit">Converter</button>
     </form>
+    <p>Resultado: {{ result }}</p>
 </body>
 </html>
