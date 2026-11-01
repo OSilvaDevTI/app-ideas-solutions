@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minhas soluções do App Ideas</title>
+  <meta name="description" content="Projetos resolvidos do repositório App Ideas, organizados por nível.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<!--
+  ===========================================================================
+  MOLDE: copie o bloco abaixo para adicionar um novo projeto em qualquer nível.
+  Dentro de <ul class="projects"> cole um novo <li> com este conteúdo:
+
+  data-status pode ser: "todo" (a fazer) | "doing" (em andamento) | "done" (concluído)
+  Lembre de trocar o texto do <span class="project__status"> junto.
+
+  <li>
+    <article class="project" data-status="todo">
+      <div class="project__top">
+        <h3 class="project__title">Nome do projeto</h3>
+        <span class="project__status">A fazer</span>
+      </div>
+      <div>
+        <span class="project__label">Explicação do projeto</span>
+        <p class="project__description">Esse projeto...</p>
+      </div>
+      <div>
+        <span class="project__label">Resultado</span>
+        <div class="project__result">X + Y = 2</div>
+      </div>
+      <div class="project__links">
+        <a href="projects/beginner/nome-do-projeto/index.html">Abrir projeto</a>
+        <a href="LINK_DA_DESCRICAO_ORIGINAL" target="_blank" rel="noopener">Descrição original</a>
+      </div>
+    </article>
+  </li>
+  ===========================================================================
+-->
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Minhas soluções do App Ideas</h1>
+      <p>
+        Todos os projetos que resolvi a partir do repositório
+        <a href="https://github.com/florinpop17/app-ideas" target="_blank" rel="noopener">florinpop17/app-ideas</a>,
+        reunidos em um só lugar e separados por nível.
+      </p>
+      <nav class="site-nav" aria-label="Níveis dos projetos">
+      <a href="#beginner">Beginner <span class="count" data-count-for="beginner">0/0</span></a>
+      <a href="#intermediate">Intermediate <span class="count" data-count-for="intermediate">0/0</span></a>
+      <a href="#advanced">Advanced <span class="count" data-count-for="advanced">0/0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="level level--beginner" id="beginner" aria-labelledby="beginner-title">
+      <div class="container">
+        <div class="level__head">
+          <h2 id="beginner-title">Beginner</h2>
+          <p>Projetos para praticar os fundamentos de HTML, CSS e Python.</p>
+        </div>
+        <ul class="projects">
+        <li>
+          <article class="project" data-status="done">
+            <div class="project__top">
+              <h3 class="project__title">Bin2Dec</h3>
+              <span class="project__status">Concluído</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Converte um número binário digitado pelo usuário em decimal, aceitando apenas 0 e 1.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result">1010 &rarr; 10</div>
+            </div>
+            <div class="project__links"><a href="projects/beginner/bin2dec/index.html">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 2</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 3</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="level level--intermediate" id="intermediate" aria-labelledby="intermediate-title">
+      <div class="container">
+        <div class="level__head">
+          <h2 id="intermediate-title">Intermediate</h2>
+          <p>Projetos que pedem mais lógica, estado e organização de código.</p>
+        </div>
+        <ul class="projects">
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 1</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 2</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 3</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="level level--advanced" id="advanced" aria-labelledby="advanced-title">
+      <div class="container">
+        <div class="level__head">
+          <h2 id="advanced-title">Advanced</h2>
+          <p>Projetos maiores, com várias partes funcionando juntas.</p>
+        </div>
+        <ul class="projects">
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 1</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 2</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        <li>
+          <article class="project" data-status="todo">
+            <div class="project__top">
+              <h3 class="project__title">Nome do projeto 3</h3>
+              <span class="project__status">A fazer</span>
+            </div>
+            <div>
+              <span class="project__label">Explicação do projeto</span>
+              <p class="project__description">Escreva aqui o que o projeto faz, com suas palavras.</p>
+            </div>
+            <div>
+              <span class="project__label">Resultado</span>
+              <div class="project__result"></div>
+            </div>
+            <div class="project__links"><a href="#" aria-disabled="true">Abrir projeto</a>
+              <a href="https://github.com/florinpop17/app-ideas/tree/master/Projects" target="_blank" rel="noopener">Descrição original</a></div>
+          </article>
+        </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Ideias de projetos por Florin Pop. Soluções escritas por mim.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

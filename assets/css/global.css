@@ -1,0 +1,229 @@
+/* ==========================================================================
+   global.css — estilos globais do portfólio App Ideas
+   Organização: 1 Tokens · 2 Reset · 3 Layout · 4 Componentes · 5 Utilitários
+   ========================================================================== */
+
+/* 1. TOKENS ---------------------------------------------------------------- */
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --ink: #14213d;
+  --ink-soft: #4b5a73;
+  --line: #d3dae4;
+
+  /* uma cor por nível — troque aqui e muda no site todo */
+  --beginner: #0f8b8d;
+  --intermediate: #b86e00;
+  --advanced: #6a4c93;
+
+  --font-title: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-code: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+
+  --radius: 6px;
+  --space: 1rem;
+  --container: 72rem;
+}
+
+/* 2. RESET ----------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* 3. LAYOUT ---------------------------------------------------------------- */
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+}
+
+.site-header {
+  background: var(--ink);
+  color: #fff;
+  padding-block: 3.5rem 2.5rem;
+}
+
+.site-header h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+
+.site-header p {
+  margin-top: 1rem;
+  max-width: 60ch;
+  color: #c4cee0;
+}
+
+.site-header a { color: #fff; }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #ffffff55;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a:hover { background: #ffffff1a; }
+.site-nav .count { font-family: var(--font-code); font-size: 0.85rem; color: #c4cee0; }
+
+.level {
+  --accent: var(--ink);
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.level--beginner     { --accent: var(--beginner); }
+.level--intermediate { --accent: var(--intermediate); }
+.level--advanced     { --accent: var(--advanced); }
+
+.level__head {
+  border-left: 6px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.level__head h2 {
+  font-family: var(--font-title);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+.level__head p { color: var(--ink-soft); max-width: 60ch; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* 4. COMPONENTES ----------------------------------------------------------- */
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.project__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.project__title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.project__status {
+  flex-shrink: 0;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--bg);
+  color: var(--ink-soft);
+}
+
+.project[data-status="doing"] .project__status { background: #fff1d6; color: #7a4a00; }
+.project[data-status="done"]  .project__status { background: var(--accent); color: #fff; }
+
+.project__label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  margin-bottom: 0.25rem;
+}
+
+.project__description { color: var(--ink); }
+
+/* Área onde o resultado do projeto será colocado */
+.project__result {
+  min-height: 5rem;
+  padding: 0.9rem 1rem;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  font-family: var(--font-code);
+  font-size: 0.95rem;
+  overflow-x: auto;
+}
+
+.project[data-status="done"] .project__result {
+  border: 1px solid var(--accent);
+  background: #fff;
+}
+
+.project__result:empty::before,
+.project__result .placeholder {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.project__result:empty::before { content: "O resultado aparecerá aqui."; }
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+  font-weight: 600;
+}
+
+.project__links a { color: var(--accent); }
+.project__links a[aria-disabled="true"] { color: var(--ink-soft); pointer-events: none; text-decoration: none; }
+
+/* 5. UTILITÁRIOS ----------------------------------------------------------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
