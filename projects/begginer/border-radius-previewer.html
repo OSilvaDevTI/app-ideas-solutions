@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border-radius Previewer</title>
-    <link rel="stylesheet" href="../../../assets/css/global.css">
-    <link rel="stylesheet" href="../../../assets/css/border-radius.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/border-radius.css">
 </head>
 <body>
-    <div class="border-radius">
-        <a class="border-radius__back" href="../../../index.html">&larr; Voltar ao início</a>
-        <h1>Border-radius Previewer</h1>
-        <div class="border-radius__preview"></div>
-        <form class="border-radius__form">
-            <label for="top-left">Top Left:</label>
-            <input type="number" id="top-left" name="top-left" min="0" value="0">
-            <label for="top-right">Top Right:</label>
-            <input type="number" id="top-right" name="top-right" min="0" value="0">
-            <label for="bottom-right">Bottom Right:</label>
-            <input type="number" id="bottom-right" name="bottom-right" min="0" value="0">
-            <label for="bottom-left">Bottom Left:</label>
-            <input type="number" id="bottom-left" name="bottom-left" min="0" value="0">
-        </form>
+    <a class="home-button" href="../../index.html">Voltar ao início</a>
+    <h1>Border-radius Previewer</h1>
 
-        <p class="border-radius__css">CSS: <span id="css-output">border-radius: 0px 0px 0px 0px;</span></p>
+    <div class="box"></div>
+    <div class="container">
+        <input type="text"> <label>px</label>
+        <button class="copy-button" type="button">Copiar CSS</button>
     </div>
+    <script src="../../assets/js/borderradius.js" defer></script>
 
-    
 </body>
 </html>

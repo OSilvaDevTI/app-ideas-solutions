@@ -1,25 +1,87 @@
-#div1 {
-  border-radius: 25px;
-  background-color: #73AD21;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
+body {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  background: var(--bg);
 }
 
-#div2 {
-  border-radius: 25px;
-  border: 2px solid #73AD21;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
+.home-button {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-#div3 {
-  border-radius: 25px;
-  background-image: url(paper.gif);
-  background-position: left top;
-  background-repeat: repeat;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
+.home-button:hover,
+.home-button:focus-visible {
+  border-color: var(--beginner);
+  background: var(--surface);
+  color: var(--beginner);
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  border: 6px solid var(--beginner);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.container{
+  text-align: center;
+}
+
+input{
+  width: 220px;
+  height: 40px;
+  outline: none;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  padding-left: 15px; 
+  text-transform: lowercase;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.copy-button {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 16px;
+  border: 2px solid var(--beginner);
+  border-radius: var(--radius);
+  color: #fff;
+  background: var(--beginner);
+  font: 700 1rem var(--font-body);
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  color: var(--beginner);
+  background: var(--surface);
+}
+
+label {
+  font-size: 30px;
+  margin-left: 2px;
+  color: var(--beginner);
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--beginner);
 }
