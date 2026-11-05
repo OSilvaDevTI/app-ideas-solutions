@@ -32,8 +32,8 @@ Cada projeto é **independente**: o CSS global fornece a base visual e o `style.
 
 | Tecnologia | Uso |
 | ---------- | --- |
-| **HTML5** | Estrutura das páginas |
-| **CSS3** | Estilização, tokens de design e layout responsivo |
+| **HTML** | Estrutura das páginas |
+| **CSS** | Estilização, tokens de design e layout responsivo |
 | **JavaScript (Vanilla)** | Lógica dos projetos e contadores de progresso |
 
 ## 📁 Estrutura do repositório
