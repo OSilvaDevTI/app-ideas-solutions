@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cycle</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/colorcycle.css">
+</head>
+<body>
+    <h1>Color Cycle</h1>
+
+    <div id="colorBox"></div>
+
+    <fieldset>
+        <legend>Cor inicial (hexadecimal)</legend>
+        <div class="campo">
+            <label for="red">R</label>
+            <input id="red" type="text" maxlength="2" value="20" autocomplete="off">
+        </div>
+        <div class="campo">
+            <label for="green">G</label>
+            <input id="green" type="text" maxlength="2" value="60" autocomplete="off">
+        </div>
+        <div class="campo">
+            <label for="blue">B</label>
+            <input id="blue" type="text" maxlength="2" value="A0" autocomplete="off">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Incremento por ciclo</legend>
+        <div class="campo">
+            <label for="incRed">R</label>
+            <input id="incRed" type="number" min="-255" max="255" value="10">
+        </div>
+        <div class="campo">
+            <label for="incGreen">G</label>
+            <input id="incGreen" type="number" min="-255" max="255" value="5">
+        </div>
+        <div class="campo">
+            <label for="incBlue">B</label>
+            <input id="incBlue" type="number" min="-255" max="255" value="15">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Intervalo (ms)</legend>
+        <div class="campo">
+            <label for="interval">Tempo</label>
+            <input id="interval" type="number" min="50" step="50" value="250">
+        </div>
+    </fieldset>
+
+    <p id="warning" role="alert" hidden></p>
+
+    <button id="toggleButton">Start</button>
+
+    <script src="../../assets/js/colorcycle.js"></script>
+</body>
+</html>
