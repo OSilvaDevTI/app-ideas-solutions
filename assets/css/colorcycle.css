@@ -8,6 +8,18 @@ body {
     background: var(--bg);
 }
 
+.home-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    color: var(--ink-soft);
+    background: var(--surface);
+    font-weight: 700;
+    text-decoration: none;
+}
+
 h1 {
     color: var(--beginner);
     font-family: var(--font-title);
