@@ -42,7 +42,6 @@ Cada projeto é **independente**: o CSS global fornece a base visual e o `style.
 app-ideas-solutions/
 ├── index.html                  # Página principal com todos os níveis
 ├── README.md
-├── .gitignore
 ├── assets/
 │   ├── css                     # Estilos globais (tokens, layout, componentes)
 │   ├── js                      # Contadores de progresso
